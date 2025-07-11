@@ -1,0 +1,33 @@
+<!-- src/app/components/confirmation/confirmation.component.html -->
+<div class="confirmation-container">
+  <div class="confirmation-box">
+    <h2>✅ Registration Confirmation</h2>
+
+    <div class="confirmation-details">
+      <p><strong>First Name:</strong> {{ student?.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ student?.lastName }}</p>
+      <p><strong>Email:</strong> {{ student?.email }}</p>
+      <p><strong>Phone:</strong> {{ student?.phone }}</p>
+      <p><strong>College:</strong> {{ student?.collegeName }}</p>
+      <p><strong>Selected Course:</strong> {{ courseName || courseId }}</p>
+      <p><strong>Registration ID:</strong> {{ registrationId }}</p>
+      <p><strong>Registered Date:</strong> {{ registeredDate }}</p>
+      <p><strong>Course Start Date:</strong> {{ courseStartDate }}</p>
+      <p><strong>Course End Date:</strong> {{ courseEndDate }}</p>
+    </div>
+
+    <div class="button-group">
+      <button (click)="editDetails()" class="edit-btn">✏️ Edit</button>
+
+      <button (click)="confirm()" [disabled]="isConfirmed" class="confirm-btn">
+        ✅ Confirm Registration
+      </button>
+
+      <button (click)="signOut()" class="signout-btn">🚪 Sign Out</button>
+    </div>
+
+    <div *ngIf="isConfirmed" class="success-message">
+      🎉 Your registration has been successfully confirmed!
+    </div>
+  </div>
+</div>

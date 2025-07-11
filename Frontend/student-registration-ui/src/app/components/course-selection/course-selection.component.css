@@ -1,0 +1,61 @@
+.selection-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d7f0e4; /* ✅ same as signup */
+}
+
+.selection-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 380px;
+}
+
+.selection-box h2 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.course-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.course-option input[type='radio'] {
+  margin-top: 5px;
+}
+
+.course-option strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.course-desc {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #1b5e20;
+}

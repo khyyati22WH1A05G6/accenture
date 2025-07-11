@@ -1,0 +1,16 @@
+<div class="signup-container">
+  <div class="signup-box">
+    <h2>Student Signup</h2>
+    <p>Please fill in your details to create an account</p>
+
+    <input type="email" [(ngModel)]="user.email" placeholder="Email" required />
+    <input type="password" [(ngModel)]="user.password" placeholder="Password" required />
+
+    <button (click)="signup()">Sign Up</button>
+
+    <p class="redirect-login">
+      Already have an account?
+      <a (click)="goToLogin()" style="cursor: pointer;">Login here</a>
+    </p>
+  </div>
+</div>

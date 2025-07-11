@@ -1,0 +1,22 @@
+<div class="selection-container">
+  <div class="selection-box">
+    <h2>📘 Select a Course</h2>
+    <form (ngSubmit)="submitCourse()">
+      <div class="course-option" *ngFor="let course of courses">
+        <input
+          type="radio"
+          name="course"
+          [value]="course.courseId"
+          [(ngModel)]="selectedCourseId"
+          required
+        />
+        <div>
+          <strong>{{ course.courseName }}</strong><br />
+          <small class="course-desc">{{ course.description }}</small>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">✅ Submit</button>
+    </form>
+  </div>
+</div>

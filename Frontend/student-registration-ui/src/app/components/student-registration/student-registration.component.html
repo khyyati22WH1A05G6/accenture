@@ -1,0 +1,20 @@
+<div class="register-container">
+  <div class="register-box">
+    <h2>🎓 Student Registration</h2>
+    <p class="subtitle">Fill out your details to register</p>
+
+    <form (ngSubmit)="registerStudent()">
+      <input [(ngModel)]="student.firstName" name="firstName" placeholder="First Name" required />
+      <input [(ngModel)]="student.lastName" name="lastName" placeholder="Last Name" required />
+      <input [(ngModel)]="student.email" name="email" placeholder="Email" type="email" required />
+      <input [(ngModel)]="student.phone" name="phone" placeholder="Phone Number" required />
+      <input [(ngModel)]="student.collegeName" name="collegeName" placeholder="College Name" required />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
